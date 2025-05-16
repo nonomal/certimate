@@ -41,6 +41,8 @@ export interface AccessModel extends BaseModel {
       | AccessConfigForNamecheap
       | AccessConfigForNameDotCom
       | AccessConfigForNameSilo
+      | AccessConfigForNetcup
+      | AccessConfigForNetlify
       | AccessConfigForPorkbun
       | AccessConfigForPowerDNS
       | AccessConfigForProxmoxVE
@@ -49,7 +51,7 @@ export interface AccessModel extends BaseModel {
       | AccessConfigForSafeLine
       | AccessConfigForSSH
       | AccessConfigForSSLCom
-      | AccessConfigForTelegram
+      | AccessConfigForTelegramBot
       | AccessConfigForTencentCloud
       | AccessConfigForUCloud
       | AccessConfigForUpyun
@@ -199,6 +201,7 @@ export type AccessConfigForGoDaddy = {
 
 export type AccessConfigForGoEdge = {
   apiUrl: string;
+  apiRole: string;
   accessKeyId: string;
   accessKey: string;
   allowInsecureConnections?: boolean;
@@ -246,6 +249,16 @@ export type AccessConfigForNameDotCom = {
 
 export type AccessConfigForNameSilo = {
   apiKey: string;
+};
+
+export type AccessConfigForNetcup = {
+  customerNumber: string;
+  apiKey: string;
+  apiPassword: string;
+};
+
+export type AccessConfigForNetlify = {
+  apiToken: string;
 };
 
 export type AccessConfigForNS1 = {
@@ -299,7 +312,7 @@ export type AccessConfigForSSLCom = {
   eabHmacKey: string;
 };
 
-export type AccessConfigForTelegram = {
+export type AccessConfigForTelegramBot = {
   botToken: string;
   defaultChatId?: number;
 };

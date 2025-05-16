@@ -149,6 +149,7 @@ type AccessConfigForGoDaddy struct {
 
 type AccessConfigForGoEdge struct {
 	ApiUrl                   string `json:"apiUrl"`
+	ApiRole                  string `json:"apiRole"`
 	AccessKeyId              string `json:"accessKeyId"`
 	AccessKey                string `json:"accessKey"`
 	AllowInsecureConnections bool   `json:"allowInsecureConnections,omitempty"`
@@ -198,6 +199,16 @@ type AccessConfigForNameSilo struct {
 	ApiKey string `json:"apiKey"`
 }
 
+type AccessConfigForNetcup struct {
+	CustomerNumber string `json:"customerNumber"`
+	ApiKey         string `json:"apiKey"`
+	ApiPassword    string `json:"apiPassword"`
+}
+
+type AccessConfigForNetlify struct {
+	ApiToken string `json:"apiToken"`
+}
+
 type AccessConfigForNS1 struct {
 	ApiKey string `json:"apiKey"`
 }
@@ -229,6 +240,13 @@ type AccessConfigForRainYun struct {
 	ApiKey string `json:"apiKey"`
 }
 
+type AccessConfigForRatPanel struct {
+	ApiUrl                   string `json:"apiUrl"`
+	AccessTokenId            uint   `json:"accessTokenId"`
+	AccessToken              string `json:"accessToken"`
+	AllowInsecureConnections bool   `json:"allowInsecureConnections,omitempty"`
+}
+
 type AccessConfigForSafeLine struct {
 	ApiUrl                   string `json:"apiUrl"`
 	ApiToken                 string `json:"apiToken"`
@@ -249,7 +267,7 @@ type AccessConfigForSSLCom struct {
 	EabHmacKey string `json:"eabHmacKey"`
 }
 
-type AccessConfigForTelegram struct {
+type AccessConfigForTelegramBot struct {
 	BotToken      string `json:"botToken"`
 	DefaultChatId int64  `json:"defaultChatId,omitempty"`
 }
